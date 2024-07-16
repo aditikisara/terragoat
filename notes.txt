@@ -1,0 +1,42 @@
+checkov -f ec2.tf --bc-api-key 5178b57a-51e6-4642-8b6c-bcde99a4e5c1::pGCeMCs74yRcoLtJhyLJyyM5u+s= --repo-id testing/test --prisma-api-url https://api4.prismacloud.io
+
+name of the scan (repo id): <name>/<name>
+
+Scan a file:
+checkov -f main.tf
+
+Scan a directory:
+checkov -d terraform
+
+Use a file config:
+--config-file
+
+Only run the Terraform runner:
+--framework terraform
+
+Run specific checks by ID:
+--check CKV_AWS_123,CKV_AWS_456
+
+Skip spcific checks by ID:
+--skip-check CKV_AWS_789
+
+Report results, but do not return an error code:
+--soft-fail
+
+Run all checks, soft-fail if only specific checks fail (by ID):
+--soft-fail-on CKV_AWS_123,CKV_AWS_456
+
+Run all checks, hard-fail if specific checks fail (by ID):
+--hard-fail-on CKV_AWS_789
+
+Format the output in JSON:
+--output json
+
+Load custom policies from another location:
+--external-checks-dir ~/my_checks
+
+List the available policies (does not run a scan):
+--list
+
+List other flags:
+--help
